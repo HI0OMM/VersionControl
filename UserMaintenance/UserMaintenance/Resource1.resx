@@ -125,4 +125,8 @@
     <value>FullName</value>
     <comment>Teljesnév</comment>
   </data>
+  <data name="Fájlba írás" xml:space="preserve">
+    <value>Fájlba írás</value>
+    <comment>Fájlba írás</comment>
+  </data>
 </root>
