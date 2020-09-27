@@ -121,6 +121,10 @@
     <value>Add</value>
     <comment>Hozzáadás</comment>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Törlés</comment>
+  </data>
   <data name="FullName" xml:space="preserve">
     <value>FullName</value>
     <comment>Teljesnév</comment>

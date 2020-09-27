@@ -19,6 +19,7 @@ namespace UserMaintenance
         {
             InitializeComponent();
             lblFullName.Text = Resource1.FullName;
+            button2.Text = Resource1.Delete;
             
             btnAdd.Text = Resource1.Add;
             button1.Text = Resource1.Fájlba_írás;
@@ -57,5 +58,7 @@ namespace UserMaintenance
                 }
             }
         }
+
+        
     }
 }
