@@ -123,7 +123,7 @@
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>FirstName</value>
-    <comment>Keresztnév</comment>
+    <comment>Utónév</comment>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>LastName</value>
