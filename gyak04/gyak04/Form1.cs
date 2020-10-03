@@ -57,7 +57,8 @@ namespace gyak04
                 xlSheet = xlWB.ActiveSheet;
 
                 
-                CreateTable(); 
+                CreateTable();
+                FormatTable();
 
                 
                 xlApp.Visible = true;
@@ -134,6 +135,27 @@ namespace gyak04
             ExcelCoordinate += x.ToString();
 
             return ExcelCoordinate;
+        }
+        void FormatTable()
+        {
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+            int lastRowID = xlSheet.UsedRange.Rows.Count;
+            Excel.Range tableRange = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, headers.Length));
+            tableRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            Excel.Range firstColRange = xlSheet.get_Range(GetCell(2, 1), GetCell(lastRowID, 1));
+            firstColRange.Font.Bold = true;
+            firstColRange.Interior.Color = Color.LightYellow;
+            Excel.Range lastColRange = xlSheet.get_Range(GetCell(2, headers.Length), GetCell(lastRowID, headers.Length));
+            lastColRange.Interior.Color = Color.LightGreen;
+            lastColRange.NumberFormat = "$????.??";
         }
 
 
